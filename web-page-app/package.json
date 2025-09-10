@@ -1,0 +1,31 @@
+{
+  "name": "web-page-app",
+  "version": "1.0.0",
+  "description": "A web application to test interface transitions and user preferences.",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "live-server public",
+    "build": "echo 'Build step not defined'",
+    "test": "echo 'Test step not defined'"
+  },
+  "keywords": [
+    "interface",
+    "transition",
+    "test",
+    "user experience"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    "live-server": "^1.2.1"
+  },
+  "devDependencies": {},
+  "homepage": "https://github.com/yourusername/web-page-app",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/web-page-app.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/web-page-app/issues"
+  }
+}

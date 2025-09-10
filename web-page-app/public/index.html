@@ -1,0 +1,145 @@
+<!-- filepath: web-page-app/public/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interface Transition Test</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="timer" id="timer">00:00</div>
+        <div class="progress-bar">
+            <div class="progress-fill" id="progressFill"></div>
+        </div>
+        
+        <!-- Form 1: Start -->
+        <div class="form-section active" id="form1">
+            <h1>The Ultimate Interface Test</h1>
+            <div class="start-explanation">
+                <p>Design choices shape how we think, act, and even make mistakes. The Ultimate Interface Test explores how different UI controls—buttons, dropdowns, toggles, and more—affect your ability to make quick, confident decisions.<br><br></p>
+
+                <p>This isn&apos;t just about preferences. It&apos;s about performance.</p>
+                <p>As you move through a series of simple questions, we&apos;ll observe how interface styles influence speed, accuracy, and ease of use. Whether you're a designer, developer, or just curious about how interfaces guide behavior, this test reveals how subtle shifts in control design can make—or break—usability.<br><br>
+                <p>Ready to see how design affects decision-making?<br></p>
+
+                <p>Click Start to begin.</p>
+            </div>
+            <button class="btn" onclick="startTest()">Start</button>
+        </div>
+        
+        <!-- Form 2: Text Fields -->
+        <div class="form-section" id="form2">
+            <h2>Tell Us Your Favorites</h2>
+            <div class="form-group">
+                <label>What is your favorite Fruit?</label>
+                <input type="text" id="fruit" required>
+            </div>
+            <div class="form-group">
+                <label>What is your favorite Season?</label>
+                <input type="text" id="season" required>
+            </div>
+            <div class="form-group">
+                <label>What is your favorite Color?</label>
+                <input type="text" id="color" required>
+            </div>
+            <div class="form-group">
+                <label>What is your favorite Sport?</label>
+                <input type="text" id="sport" required>
+            </div>
+            <div class="form-group">
+                <label>What is your favorite Movie?</label>
+                <input type="text" id="movie" required>
+            </div>
+            <button class="btn" onclick="nextForm()">Next</button>
+        </div>
+        
+        <!-- Form 3: Radio Buttons -->
+        <div class="form-section" id="form3">
+            <h2>Select Your Favorites</h2>
+            <div class="form-group">
+                <label>What is your favorite Fruit?</label>
+                <div class="radio-group" id="fruitRadios"></div>
+            </div>
+            <div class="form-group">
+                <label>What is your favorite Season?</label>
+                <div class="radio-group" id="seasonRadios"></div>
+            </div>
+            <div class="form-group">
+                <label>What is your favorite Color?</label>
+                <div class="radio-group" id="colorRadios"></div>
+            </div>
+            <div class="form-group">
+                <label>What is your favorite Sport?</label>
+                <div class="radio-group" id="sportRadios"></div>
+            </div>
+            <div class="form-group">
+                <label>What is your favorite Movie?</label>
+                <div class="radio-group" id="movieRadios"></div>
+            </div>
+            <button class="btn" onclick="nextForm()">Next</button>
+        </div>
+        
+        <!-- Form 4: Dropdowns -->
+        <div class="form-section" id="form4">
+            <h2>Choose Your Favorites</h2>
+            <div class="form-group">
+                <label>What is your favorite Fruit?</label>
+                <select id="fruitSelect">
+                    <option value="">Select a fruit...</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>What is your favorite Season?</label>
+                <select id="seasonSelect">
+                    <option value="">Select a season...</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>What is your favorite Color?</label>
+                <select id="colorSelect">
+                    <option value="">Select a color...</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>What is your favorite Sport?</label>
+                <select id="sportSelect">
+                    <option value="">Select a sport...</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>What is your favorite Movie?</label>
+                <select id="movieSelect">
+                    <option value="">Select a movie...</option>
+                </select>
+            </div>
+            <button class="btn" onclick="nextForm()">Next</button>
+        </div>
+        
+        <!-- Form 5: Search and Select -->
+        <div class="form-section" id="form5">
+            <h2>Find Your Favorites</h2>
+            <div class="search-container">
+                <label>Type to search for your favorites:</label>
+                <input type="text" id="searchBox" placeholder="Start typing..." oninput="filterFavorites()">
+            </div>
+            <div class="favorites-grid" id="favoritesGrid"></div>
+        </div>
+        
+        <!-- Form 6: Results -->
+        <div class="form-section" id="form6">
+            <div class="results">
+                <h1>Now the test begins.</h1>
+                <div id="timeResults"></div>
+                <p>Let me know what I should change or update. <br />Or visit my website at <a href="https://www.martyhall.com">https://www.martyhall.com</a><br /><br /> </p>
+                <p>Now go back and improve your times</p>
+                <span class="hint-link" onclick="showHint()">Want a hint?</span>
+                <div class="hint-text" id="hintText">Try the back button.</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../src/app.js"></script>
+</body>
+</html>
